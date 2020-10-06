@@ -1,0 +1,22 @@
+<table class="table">
+  <thead>
+  <tr>
+    <th>Sun</th>
+    <th>Mon</th>
+    <th>Tue</th>
+    <th>Wed</th>
+    <th>Thu</th>
+    <th>Fri</th>
+    <th>Sun</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let week of Month">
+    <td *ngFor="let day of week.days" [class.disabled]="day.disabled"
+        [class.selective]="day.selected" [class.active]="day.active" ]>
+      <span>{{day.value | format:'dd DD'}}</span>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
