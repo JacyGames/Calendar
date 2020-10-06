@@ -1,0 +1,16 @@
+td {
+  cursor: pointer;
+  &.disabled {
+    opacity: 0.5;
+  }
+  &:hover:not(.disabled) {
+    background: #E9ECEF;
+  }
+  &.active {
+    color: red;
+    font-weight: 700;
+  }
+  &.selected {
+    background: #E9ECEF;
+  }
+}

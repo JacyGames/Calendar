@@ -1,1 +1,24 @@
-<p>calendar-task works!</p>
+<section>
+  <header>
+    Task manager: <strong>{{dateService.date | async | format:'DD.MM.YYYY'}}</strong>
+  </header>
+  <main>
+    <ul>
+      <li class="task">
+        <span>
+          <strong>1.</strong>
+          some task
+        </span>
+        <button class="btn btn-outline-danger">Remove</button>
+      </li>
+    </ul>
+  </main>
+  <footer>
+    <form [formGroup]="form" (ngSubmit)="submit()">
+      <label>
+        <input type="text" class="form-control" formControlName="task">
+      </label>
+      <button [disabled]="form.invalid" type="submit" class="btn btn-secondary btn-lg btn-block">Add tusk</button>
+    </form>
+  </footer>
+</section>

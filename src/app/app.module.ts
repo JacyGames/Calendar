@@ -9,6 +9,7 @@ import {CalendarDateComponent} from './components/calendar-date/calendar-date.co
 import {DataService} from './components/common/data.service';
 import { FormatPipe } from './components/common/format.pipe';
 import {CommonModule} from '@angular/common';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,8 @@ import {CommonModule} from '@angular/common';
   imports: [
     CommonModule,
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

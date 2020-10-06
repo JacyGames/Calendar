@@ -13,7 +13,7 @@
   <tbody>
   <tr *ngFor="let week of Month">
     <td *ngFor="let day of week.days" [class.disabled]="day.disabled"
-        [class.selective]="day.selected" [class.active]="day.active" ]>
+        [class.selected]="day.selected" [class.active]="day.active" (click)="select(day)">
       <span>{{day.value | format:'dd DD'}}</span>
     </td>
   </tr>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Week} from '../common/interfaces';
+import {Day, Week} from '../common/interfaces';
 import {DataService} from '../common/data.service';
 import * as moment from 'moment';
 
@@ -36,6 +36,9 @@ export class CalendarBodyComponent implements OnInit {
       });
     }
     this.Month = calendar;
+  }
+  select(day: Day): void{
+    this.dataService.changeDate(day.value);
     console.log(this.Month);
   }
 
