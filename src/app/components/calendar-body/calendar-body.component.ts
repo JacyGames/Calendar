@@ -39,7 +39,6 @@ export class CalendarBodyComponent implements OnInit {
   }
   select(day: Day): void{
     this.dataService.changeDate(day.value);
-    console.log(this.Month);
   }
 
 }

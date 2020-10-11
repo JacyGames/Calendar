@@ -9,3 +9,11 @@ export interface Day {
 export interface Week {
   days: Array<Day>;
 }
+export interface Task {
+  date?: string;
+  task: string;
+  id?: string;
+}
+export interface ResponseFirebase {
+  name: string;
+}
