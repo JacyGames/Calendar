@@ -31,8 +31,8 @@ export class CalendarTaskComponent implements OnInit {
       task,
       date: this.dateService.date.value.format('DD-MM-YYYY')
     };
-    this.taskService.create(taskForFireSet).subscribe(task => {
-      this.tasks.push(task);
+    this.taskService.create(taskForFireSet).subscribe((t) => {
+      this.tasks.push(t);
       this.form.reset();
     }, error => console.error(error));
   }
