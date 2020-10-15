@@ -1,6 +1,5 @@
-<div class="text-center mt-4 d-flex justify-content-center navigation mb-5">
+<div>
   <i class="material-icons" (click)="changeDate(-1)">arrow_left  </i>
   <span class="navigation-data">{{dateService.date | async | format}}</span>
   <i class="material-icons" (click)="changeDate(1)">arrow_right</i>
-
 </div>

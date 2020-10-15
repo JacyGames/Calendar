@@ -1,16 +1,57 @@
 td {
+  border: none;
   cursor: pointer;
+  width: 120px;
+  height: 40px;
+  padding: 5px 0 5px 15px;
+  border-collapse: collapse;
   &.disabled {
     opacity: 0.5;
   }
   &:hover:not(.disabled) {
-    background: #E9ECEF;
+    background: #3986c8;
   }
   &.active {
-    color: red;
     font-weight: 700;
   }
   &.selected {
-    background: #E9ECEF;
+    background: blue;
+  }
+}
+table {
+  margin: 0 auto;
+  color: white;
+  font-size: 20px;
+  & tr {
+    height: 30px;
+    border: none;
+    & th {
+      border: none;
+      text-align: start;
+      padding: 5px 0 5px 15px;
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  table {
+    & > tr {
+      & > th {
+        padding: 0;
+      }
+      & > td {
+        padding: 0;
+        max-width: 35px;
+        width: 35px;
+        height: 35px;
+        text-align: center;
+      }
+    }
+  }
+  td {
+    padding: 0;
+    max-width: 35px;
+    width: 35px;
+    height: 35px;
+    text-align: center;
   }
 }
